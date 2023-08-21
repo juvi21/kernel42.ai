@@ -19,6 +19,9 @@ function App() {
   return (
     <ChakraProvider theme = {theme}>
       <Header />
+      <Box p={8}>
+    
+      </Box>
       <Headline/> 
       
       <Roadmap/>
