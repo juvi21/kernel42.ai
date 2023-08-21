@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChakraProvider, Box, Text, Spacer } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import Header from "./Header";
 import Headline from "./Headline";

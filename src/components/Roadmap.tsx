@@ -1,4 +1,4 @@
-import { Box, Center } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
 import RoadmapStep from "./RoadmapStep";
 
 interface Step {

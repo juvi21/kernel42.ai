@@ -1,11 +1,4 @@
-import {
-  Box,
-  Flex,
-  Text,
-  Avatar,
-  Spacer,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Avatar, useColorModeValue } from "@chakra-ui/react";
 
 interface TestimonialProps {
   text: string;

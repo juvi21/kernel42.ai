@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Center, Stack, Divider } from "@chakra-ui/react";
+import { Box, Heading, Text, Center, Stack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
