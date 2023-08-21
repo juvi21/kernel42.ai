@@ -1,4 +1,11 @@
-import { Box, Flex, Text, Avatar, Spacer, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Text,
+  Avatar,
+  Spacer,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 interface TestimonialProps {
   text: string;
@@ -7,7 +14,12 @@ interface TestimonialProps {
   avatarUrl: string;
 }
 
-const Testimonial: React.FC<TestimonialProps> = ({ text, author, role, avatarUrl }) => {
+const Testimonial: React.FC<TestimonialProps> = ({
+  text,
+  author,
+  role,
+  avatarUrl,
+}) => {
   const bgColor = useColorModeValue("#FAF5EA", "gray.700");
   const textColor = useColorModeValue("black", "white");
 

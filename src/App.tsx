@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { ChakraProvider, Box, Text, Spacer } from '@chakra-ui/react';
+import * as React from "react";
+import { ChakraProvider, Box, Text, Spacer } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
-import Header from './Header';
-import Headline from './Headline';
-import Roadmap from './components/Roadmap';
-import TestimonialContainer from './components/TestimonialsContainer';
-
+import Header from "./Header";
+import Headline from "./Headline";
+import Roadmap from "./components/Roadmap";
+import TestimonialContainer from "./components/TestimonialsContainer";
 
 const theme = extendTheme({
   fonts: {
@@ -17,19 +16,15 @@ const theme = extendTheme({
 
 function App() {
   return (
-    <ChakraProvider theme = {theme}>
+    <ChakraProvider theme={theme}>
       <Header />
-      <Box p={8}>
-    
-      </Box>
-      <Headline/> 
-      
-      <Roadmap/>
-      
-      <Box p={6}>
-    
-      </Box>
-      <TestimonialContainer/>
+      <Box p={8}></Box>
+      <Headline />
+
+      <Roadmap />
+
+      <Box p={6}></Box>
+      <TestimonialContainer />
     </ChakraProvider>
   );
 }

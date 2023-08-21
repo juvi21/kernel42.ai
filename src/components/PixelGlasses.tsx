@@ -39,7 +39,13 @@ const PixelGlasses: React.FC = () => {
   };
 
   return (
-    <Center w="120px" h="40px" bg="black" borderRadius="5px" position="relative">
+    <Center
+      w="120px"
+      h="40px"
+      bg="black"
+      borderRadius="5px"
+      position="relative"
+    >
       <Box
         ref={leftEyeRef}
         w="40px"
@@ -58,7 +64,9 @@ const PixelGlasses: React.FC = () => {
           position="absolute"
           left="50%"
           top="50%"
-          transform={`translate(-50%, -50%) translate(${calculatePupilPosition(leftEyeRef).x}px, ${calculatePupilPosition(leftEyeRef).y}px)`}
+          transform={`translate(-50%, -50%) translate(${
+            calculatePupilPosition(leftEyeRef).x
+          }px, ${calculatePupilPosition(leftEyeRef).y}px)`}
         />
       </Box>
       <Box
@@ -79,7 +87,9 @@ const PixelGlasses: React.FC = () => {
           position="absolute"
           left="50%"
           top="50%"
-          transform={`translate(-50%, -50%) translate(${calculatePupilPosition(rightEyeRef).x}px, ${calculatePupilPosition(rightEyeRef).y}px)`}
+          transform={`translate(-50%, -50%) translate(${
+            calculatePupilPosition(rightEyeRef).x
+          }px, ${calculatePupilPosition(rightEyeRef).y}px)`}
         />
       </Box>
     </Center>
