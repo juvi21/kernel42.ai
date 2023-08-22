@@ -17,7 +17,15 @@ const Testimonial: React.FC<TestimonialProps> = ({
   const textColor = useColorModeValue("black", "white");
 
   return (
-    <Box borderRadius="lg" boxShadow="md" p={6} bg={bgColor}>
+    <Box
+      borderRadius="lg"
+      boxShadow="md"
+      p={6}
+      bg={bgColor}
+      px={["5%", "10%"]}
+      border="2px solid black"
+      outline="0.5px solid black"
+    >
       <Text color={textColor} fontStyle="italic" mb={4}>
         "{text}"
       </Text>

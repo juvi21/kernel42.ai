@@ -46,7 +46,8 @@ const RoadmapStep: React.FC<RoadmapStepProps> = ({
       mb={1}
       ml={marginLeft}
       mr={marginRight}
-      maxWidth="80%"
+      width="100%"
+      maxWidth="35%"
     >
       <Box fontWeight="bold">{title}</Box>
       <Box>{description}</Box>

@@ -16,10 +16,22 @@ const TestimonialsContainer: React.FC = () => {
       role: "CEO, Kernel42.ai",
       avatarUrl: "https://example.com/path/to/avatar2.jpg",
     },
+    {
+      text: "Short description about yourself",
+      author: "Gal Wu",
+      role: "CEO, Kernel42.ai",
+      avatarUrl: "https://example.com/path/to/avatar2.jpg",
+    },
+    {
+      text: "Short description about yourself",
+      author: "Gal Wu",
+      role: "CEO, Kernel42.ai",
+      avatarUrl: "https://example.com/path/to/avatar2.jpg",
+    },
   ];
 
   return (
-    <Box p={0}>
+    <Box p={0} px={20}>
       <Center flexDirection="column" mb={6} px={["5%", "10%"]}>
         <Heading mb={8}>Our people:</Heading>
 
