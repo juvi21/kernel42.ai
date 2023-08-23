@@ -33,7 +33,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
     <ScaleFade initialScale={0.9} in={true}>
       <LinkBox as="article">
         <Box
-          borderRadius="lg"
+          borderRadius="0"
           boxShadow="md"
           p={6}
           bg={bgColor}

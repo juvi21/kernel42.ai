@@ -14,7 +14,7 @@ const slideUpForHeading = {
 
 const slideOverText = {
   hidden: { y: -100, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.2 } },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.6, delay: 0.5 } },
 };
 
 const Headline = () => {
@@ -71,6 +71,8 @@ const Headline = () => {
             color="white"
             textAlign="center"
             maxWidth="xl"
+            px={2}
+            py={0.3} // <-- Adjusted this value
             variants={slideOverText}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}

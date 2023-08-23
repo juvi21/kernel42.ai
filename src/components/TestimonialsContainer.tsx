@@ -53,9 +53,9 @@ const TestimonialsContainer: React.FC = () => {
             justifyContent="center"
             width="100vw" // Full viewport width
             mb={4}
-            borderRadius="lg"
+            borderRadius="0"
             overflow="hidden"
-            borderBottom="4px solid black"
+            borderBottom="2px solid black"
           >
             <Image
               src="talent.jpg" // replace with your image path
@@ -76,7 +76,7 @@ const TestimonialsContainer: React.FC = () => {
 
       <Container maxW="container.xl" px={20}>
         <Center flexDirection="column" mb={6}>
-          <Box borderWidth="2px" borderColor="black" p={3} mb={6}>
+          <Box p={3} mb={6}>
             <Text color="gray.700">
               We gathered great Talent too 42kernel. We are a group of Hacker
               minded Engineers who have done highly in competitive environments
