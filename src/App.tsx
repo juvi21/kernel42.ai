@@ -6,6 +6,8 @@ import Headline from "./Headline";
 import Roadmap from "./components/Roadmap";
 import TestimonialContainer from "./components/TestimonialsContainer";
 import Mission from "./Mission";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 const theme = extendTheme({
   fonts: {
@@ -27,6 +29,9 @@ function App() {
       <Box p={8}></Box>
 
       <Roadmap />
+
+      <Contact />
+      <Footer />
     </ChakraProvider>
   );
 }
