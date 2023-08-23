@@ -48,6 +48,22 @@ const RoadmapStep: React.FC<RoadmapStepProps> = ({
       mr={marginRight}
       width="100%"
       maxWidth="35%"
+      position="relative" // Added
+      _before={{
+        // Pseudo-element for the vertical line
+        content: '""',
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        left: "-8px", // Adjust as per your requirement
+        width: "4px", // Adjust as per your requirement
+        backgroundColor: "black",
+      }}
+      _hover={{
+        // Simple hover effect
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        transform: "translateY(-2px)",
+      }}
     >
       <Box fontWeight="bold">{title}</Box>
       <Box>{description}</Box>

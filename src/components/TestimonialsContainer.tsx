@@ -9,32 +9,35 @@ const TestimonialsContainer: React.FC = () => {
       author: "Adrian Beck",
       role: "CTO, Kernel42.ai",
       avatarUrl: "https://example.com/path/to/avatar1.jpg",
+      linkedInUrl: "https://www.linkedin.com",
     },
     {
       text: "Short description about yourself",
       author: "Gal Wu",
       role: "CEO, Kernel42.ai",
       avatarUrl: "https://example.com/path/to/avatar2.jpg",
+      linkedInUrl: "https://www.linkedin.com",
     },
     {
       text: "Short description about yourself",
       author: "Gal Wu",
       role: "CEO, Kernel42.ai",
       avatarUrl: "https://example.com/path/to/avatar2.jpg",
+      linkedInUrl: "https://www.linkedin.com",
     },
     {
       text: "Short description about yourself",
       author: "Gal Wu",
       role: "CEO, Kernel42.ai",
       avatarUrl: "https://example.com/path/to/avatar2.jpg",
+      linkedInUrl: "https://www.linkedin.com",
     },
   ];
 
   return (
     <Box p={0} px={20}>
       <Center flexDirection="column" mb={6} px={["5%", "10%"]}>
-        <Heading mb={8}>Our people:</Heading>
-
+        <Heading mb={8}>Talent</Heading>
         <Box borderWidth="2px" borderColor="black" p={3} mb={6}>
           <Text color="gray.700">
             We gathered great Talent too 42kernel. We are a group of Hacker
@@ -52,11 +55,12 @@ const TestimonialsContainer: React.FC = () => {
       <Grid templateColumns={["1fr", "1fr 1fr"]} gap={6}>
         {testimonials.map((testimonial, index) => (
           <Testimonial
-            key={index}
+            key={testimonial.author + index} // Use a more unique key
             text={testimonial.text}
             author={testimonial.author}
             role={testimonial.role}
             avatarUrl={testimonial.avatarUrl}
+            linkedInUrl={testimonial.linkedInUrl}
           />
         ))}
       </Grid>

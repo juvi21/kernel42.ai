@@ -1,10 +1,21 @@
-import { Box, Flex, Text, Avatar, useColorModeValue } from "@chakra-ui/react";
+// Testimonial.tsx
+import {
+  Box,
+  Flex,
+  Text,
+  Avatar,
+  useColorModeValue,
+  ScaleFade,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react";
 
 interface TestimonialProps {
   text: string;
   author: string;
   role: string;
   avatarUrl: string;
+  linkedInUrl: string; // New property for LinkedIn URL
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({
@@ -12,35 +23,52 @@ const Testimonial: React.FC<TestimonialProps> = ({
   author,
   role,
   avatarUrl,
+  linkedInUrl,
 }) => {
   const bgColor = useColorModeValue("#FAF5EA", "gray.700");
   const textColor = useColorModeValue("black", "white");
+  const borderColor = useColorModeValue("black", "white");
 
   return (
-    <Box
-      borderRadius="lg"
-      boxShadow="md"
-      p={6}
-      bg={bgColor}
-      px={["5%", "10%"]}
-      border="2px solid black"
-      outline="0.5px solid black"
-    >
-      <Text color={textColor} fontStyle="italic" mb={4}>
-        "{text}"
-      </Text>
-      <Flex alignItems="center">
-        <Avatar src={avatarUrl} size="sm" />
-        <Box ml={3}>
-          <Text fontWeight="bold" color={textColor}>
-            {author}
-          </Text>
-          <Text fontSize="sm" color={textColor}>
-            {role}
-          </Text>
+    <ScaleFade initialScale={0.9} in={true}>
+      <LinkBox as="article">
+        <Box
+          borderRadius="lg"
+          boxShadow="md"
+          p={6}
+          bg={bgColor}
+          px={["5%", "10%"]}
+          border="2px solid"
+          borderColor={borderColor}
+          _hover={{
+            transform: "scale(1.05)",
+            boxShadow: "lg",
+            cursor: "pointer",
+          }}
+        >
+          <LinkOverlay
+            href={linkedInUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Text color={textColor} fontStyle="italic" mb={4}>
+              "{text}"
+            </Text>
+            <Flex alignItems="center">
+              <Avatar src={avatarUrl} size="sm" />
+              <Box ml={3}>
+                <Text fontWeight="bold" color={textColor}>
+                  {author}
+                </Text>
+                <Text fontSize="sm" color={textColor}>
+                  {role}
+                </Text>
+              </Box>
+            </Flex>
+          </LinkOverlay>
         </Box>
-      </Flex>
-    </Box>
+      </LinkBox>
+    </ScaleFade>
   );
 };
 
