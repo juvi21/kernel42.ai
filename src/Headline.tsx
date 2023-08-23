@@ -1,9 +1,10 @@
-import { Box, Heading, Text, Center, Stack } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Stack, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const MotionStack = motion(Stack);
 const MotionText = motion(Text);
+const MotionImage = motion(Image);
 
 const slideUpForHeading = {
   hidden: { y: 30, opacity: 0 },
@@ -12,25 +13,47 @@ const slideUpForHeading = {
 
 const slideOverText = {
   hidden: { y: -100, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.2 } }, // delay adjusted since we removed the image
+  visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.2 } },
 };
 
 const Headline = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false, // Trigger animations only once
-    threshold: 0.1, // Percentage of element visible before triggering
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
   return (
     <Box
       ref={ref}
       as="section"
-      bg="white"
       py={20}
       px={10}
       borderBottom="2px solid black"
+      position="relative"
+      height="100vh"
     >
-      <Center>
+      {/* Background Image */}
+      <MotionImage
+        src="/landing.jpg"
+        fit="cover"
+        width="100%"
+        height="100%"
+        position="absolute"
+        top="0"
+        left="0"
+        zIndex="-1"
+        alt="Background Image"
+        initial={{ opacity: 0.8 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      />
+
+      <Flex
+        height="100vh"
+        flexDirection="column"
+        justifyContent="center"
+        marginTop={["-10%", "-12%", "-15%"]} // Adjust as needed for different screen sizes
+      >
         <MotionStack
           spacing={6}
           alignItems="center"
@@ -38,13 +61,13 @@ const Headline = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <Heading as="h1" size="2xl" color="black">
+          <Heading as="h1" size="2xl" color="white">
             Foundation Models for Europe
           </Heading>
 
           <MotionText
             fontSize="xl"
-            color="gray.600"
+            color="white"
             textAlign="center"
             maxWidth="xl"
             variants={slideOverText}
@@ -55,7 +78,7 @@ const Headline = () => {
             business needs.
           </MotionText>
         </MotionStack>
-      </Center>
+      </Flex>
     </Box>
   );
 };
