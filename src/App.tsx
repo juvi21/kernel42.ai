@@ -5,6 +5,7 @@ import Header from "./Header";
 import Headline from "./Headline";
 import Roadmap from "./components/Roadmap";
 import TestimonialContainer from "./components/TestimonialsContainer";
+import Mission from "./Mission";
 
 const theme = extendTheme({
   fonts: {
@@ -20,11 +21,12 @@ function App() {
       <Header />
       <Box p={8}></Box>
       <Headline />
+      <Mission />
+
+      <TestimonialContainer />
+      <Box p={8}></Box>
 
       <Roadmap />
-
-      <Box p={6}></Box>
-      <TestimonialContainer />
     </ChakraProvider>
   );
 }

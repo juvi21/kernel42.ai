@@ -1,6 +1,7 @@
 import { Box, Heading, Text, Flex, Stack, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Particles from "react-tsparticles";
 
 const MotionStack = motion(Stack);
 const MotionText = motion(Text);
@@ -52,7 +53,7 @@ const Headline = () => {
         height="100vh"
         flexDirection="column"
         justifyContent="center"
-        marginTop={["-10%", "-12%", "-15%"]} // Adjust as needed for different screen sizes
+        marginTop={["-10%", "-12%", "-15%"]}
       >
         <MotionStack
           spacing={6}
