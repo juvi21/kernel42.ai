@@ -55,12 +55,17 @@ const Mission: React.FC = () => {
             variants={textVariants}
             px={["5%", "10%"]}
           >
-            At kernel42.ai, our primary goal is to revolutionize the AI industry
-            by providing state-of-the-art solutions tailored to individual
-            business needs. We believe in the transformative power of AI and its
-            potential to elevate every aspect of our digital world. Our mission
-            is to make advanced AI technologies accessible, understandable, and
-            actionable for businesses of all sizes.
+            We're a group of enthusiasts navigating the vast world of artificial
+            intelligence. Our goal isn't just to provide solutions, but to
+            create AI tools that fit varied business needs. We believe in the
+            potential of AI and its ability to enrich our digital experiences.
+            With a genuine respect for open-source principles, we hope to one
+            day train our own foundational models, seeking a path that remains
+            true to our values. In an age where data is everywhere, we're
+            committed to upholding the European Union's rigorous data policies,
+            ensuring that our work is not only innovative but also respectful of
+            ethical standards. If you'd like to learn more about our journey and
+            plans, please visit our Roadmap
           </MotionText>
         </VStack>
       </Center>

@@ -78,14 +78,18 @@ const TestimonialsContainer: React.FC = () => {
         <Center flexDirection="column" mb={6}>
           <Box p={3} mb={6}>
             <Text color="gray.700">
-              We gathered great Talent too 42kernel. We are a group of Hacker
-              minded Engineers who have done highly in competitive environments
-              such as Capture-the-flag, Competitive Programming and
-              Math-competitons. We believe AI is fundamentally an engineering
-              Problem. We want to make sure everyone can use these powerful
-              models easily, and developer-friendly. The team is fundamentally
-              interested in making AI safe and well-aligned. Many of us have
-              backgrounds in AI Alignment Research.
+              At 42kernel, we are a collective of curious minds, each bringing a
+              unique set of experiences to the fore. Comprising hacker-minded
+              engineers, we have excelled in competitive environments such as
+              Capture-the-Flag, Competitive Programming, and Math competitions.
+              We firmly believe that AI, at its core, is an engineering
+              challenge. Our aspiration is to ensure that these powerful models
+              are not only accessible to everyone but also developer-friendly.
+              Integral to our ethos is a strong commitment to open source,
+              fostering a culture of collaboration and shared knowledge. The
+              team is deeply dedicated to ensuring AI safety and alignment.
+              Furthermore, many among us boast backgrounds in AI Alignment
+              Research.
             </Text>
           </Box>
         </Center>
