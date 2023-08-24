@@ -21,6 +21,12 @@ const Header = () => {
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
 
+      // If the user is at the very top of the page, always show the header
+      if (currentScrollTop <= 0) {
+        setIsVisible(true);
+        return;
+      }
+
       // If scrolling up, show the header
       if (currentScrollTop < lastScrollTop) {
         setIsVisible(true);
